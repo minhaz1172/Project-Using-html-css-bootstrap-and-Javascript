@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif, Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+.container {
+  width: auto;
+  min-height: 100vh;
+  background-color: rgb(5, 175, 175);
+  padding: 10px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.todo {
+  width: 100%;
+  background-color: #fff;
+  margin: 120px auto 30px;
+  padding: 20px;
+}
+
+.todo h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.todo h2 img {
+  height: 45px;
+  margin-left: 10px;
+}
+
+.input-group {
+  margin: 0 auto 20px auto;
+  /* Center the input group horizontally */
+  max-width: 500px;
+  /* Limit maximum width of the input group */
+}
+
+.input-group .form-control {
+  flex: 1;
+  /* Make the input field take up remaining space */
+  border-radius: 10px;
+  border-color: black;
+  background-color: honeydew;
+  font-weight: bold;
+}
+
+.input-group .btn {
+  flex: none;
+  /* Prevent the button from expanding */
+  border-radius: 10px;
+  padding: 0 25px;
+  border-color: black;
+  background-color: darkorange;
+  font-weight: bold;
+}
+
+.input-group .btn:hover {
+  background-color: rgb(15, 243, 64);
+  color: rgba(12, 21, 2, 0.874);
+  transition: 1s;
+}
+
+ul.list-group {
+  margin: 0 auto;
+  max-width: 500px;
+
+}
+
+ul.list-group li {
+  position: relative;
+  padding-left: 40px;
+  margin-right: 40px;
+  /* Adjust padding to make room for the image */
+}
+
+ul.list-group li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-image: url('image/unchecked.png');
+  background-size: cover;
+  background-position: center;
+  height: 30px;
+  width: 30px;
+}
+
+ul .checked {
+  text-decoration: line-through;
+  color: chocolate;
+
+}
+
+ul.list-group li.checked::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-image: url('image/checked.png');
+  background-size: cover;
+  background-position: center;
+  height: 30px;
+  width: 30px;
+
+
+}
+
+.remove-btn {
+  cursor: pointer;
+  font-size: 20px;
+  color: red;
+  margin-left: 10px;
+  border: 1px solid red;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+
+.remove-btn:hover {
+  background-color: red;
+  color: white;
+}
